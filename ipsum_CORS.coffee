@@ -12,6 +12,8 @@ app.use (req, res, next) ->
 	res.header "Access-Control-Allow-Headers", "X-Requested-With"
 	next()
 
+app.use express.static 'static'
+
 app.use (req, res, next) ->
 	path = req.url
 	console.log "requesting http://loripsum.net#{path}"

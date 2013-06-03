@@ -1,1 +1,1 @@
-web: ./ipsum_CORS
+web: coffee ipsum_CORS.coffee
