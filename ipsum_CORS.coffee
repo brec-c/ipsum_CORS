@@ -19,4 +19,5 @@ app.use (req, res, next) ->
 	console.log "requesting http://loripsum.net#{path}"
 	request("http://loripsum.net#{path}").pipe(res)
 
-server.listen 8800, -> console.log "serving on 8800"
+port = process.env.PORT || 5000
+server.listen port, -> console.log "Listening on #{port}"
