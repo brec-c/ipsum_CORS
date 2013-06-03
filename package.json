@@ -1,0 +1,13 @@
+{
+	"name":"IpsumCORS",
+	"version":"0.0.1",
+	"description":"",
+	"engine":"node >= 0.10.x",
+	"dependencies":{
+		"request": "",
+		"express": ""
+	},
+	"devDependencies":{
+		"coffee-script":""
+	}
+}
