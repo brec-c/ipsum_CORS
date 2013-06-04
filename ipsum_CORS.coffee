@@ -21,9 +21,11 @@ app.use (req, res, next) ->
 app.use express.static 'static'
 
 app.use (req, res, next) ->
-	path = req.url
-	console.log "requesting http://loripsum.net#{path}"
-	request("http://loripsum.net#{path}").pipe(res)
+	url = determineURL req.url
+	console.log "requesting #{url}"
+	request(url).pipe(res)
 
-port = process.env.PORT || 5000
+determineURL = (path) -> "http://loripsum.net#{path}"
+
+port = process.env.PORT || 5001
 server.listen port, -> console.log "Listening on #{port}"
